@@ -1,0 +1,132 @@
+body {
+  min-width: 400px;
+  background-color: rgb(126, 193, 218);
+}
+
+header {
+  margin-bottom: 40px;
+  text-align: center;
+  color: white;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  text-shadow: 2px 2px 2px rgba(43, 48, 47, 0.5);
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  text-shadow: 2px 2px 2px rgba(43, 48, 47, 0.5);
+  display: inline-block;
+  margin: 10px 30px; 
+}
+
+h3 {
+  text-align: center;
+  color: white;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  text-shadow: 2px 2px 2px rgba(43, 48, 47, 0.5);
+  display: block;
+  margin: 15px auto;
+}
+
+button {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  background:rgb(59, 180, 154);
+  border: 0px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.42) 2px 3px 5px 0px;
+  color: whitesmoke;
+  font-size: 18px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+button:hover {
+  background: #4ec58a;
+  cursor: pointer;
+}
+
+button:active {
+  background: #41ca7f;
+  cursor: pointer;
+}
+
+#p1score span {
+  color: red;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+#p2score span {
+  color: rgb(233, 236, 15);
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.inactive {
+  color:rgb(140, 192, 211)
+}
+
+/* game board table */
+#game {
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+
+}
+
+#board {
+  border-collapse: collapse;
+  margin: 0;
+  
+}
+
+#board td {
+  width: 50px;
+  height: 50px;
+  /* border: solid 1px rgb(131, 131, 131); */
+  padding: 0;
+  background-image: url(images/gameboard-tile.png);
+}
+
+#column-top td {
+  background-image: none;
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+  /* TODO: make into circles */
+  z-index: -1;
+  margin: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  position: relative;
+  animation: drop 0.5s forwards;
+}
+
+@keyframes drop {
+  100% { top: 0; }
+}
+
+/* TODO: make pieces red/blue,  depending on player 1/2 piece */
+.piece1 {
+  background-color: red;
+}
+
+.piece2 {
+  background-color: rgb(233, 236, 15);
+}
+
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+  border: dashed 1px rgb(92, 101, 131);
+}
+
+#column-top td:hover {
+  background-color: gold;
+}
